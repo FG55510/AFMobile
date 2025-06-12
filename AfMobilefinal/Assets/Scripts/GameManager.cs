@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-   // private UIManager ui;
+    private UIManager ui;
 
 
     [SerializeField] private ModosdeJogo modo;
@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         circulo = GetComponent<CirculodeInfluenciadoPlayer>();
-       // ui = FindAnyObjectByType<UIManager>();
+        ui = FindAnyObjectByType<UIManager>();
         cameramove = FindAnyObjectByType<MoveCamera>();
         zoom = FindAnyObjectByType<PinchZoom2D>();
 
@@ -59,17 +59,17 @@ public class GameManager : MonoBehaviour
         faseatual = SceneManager.GetActiveScene();
 
         fantamasatual = fantamasnafase;
-       // ui.Atualizarfantasmas(fantamasatual, fantamasparaconcluir);
+        ui.Atualizarfantasmas(fantamasatual, fantamasparaconcluir);
     }
 
     public void Fantasmamorreu()
     {
         fantamasatual--;
-      //  ui.Atualizarfantasmas(fantamasatual, fantamasparaconcluir);
+        ui.Atualizarfantasmas(fantamasatual, fantamasparaconcluir);
 
         if(fantamasatual < fantamasparaconcluir)
         {
-        //    ui.Gameover();
+            ui.Gameover();
         }
     }
 
@@ -86,7 +86,6 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(faseatual.name);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.K))
@@ -103,10 +102,10 @@ public class GameManager : MonoBehaviour
     {
         fantamasparaconcluir--;
         fantamasatual--;
-    //    ui.Atualizarfantasmas(fantamasatual, fantamasparaconcluir);
+       ui.Atualizarfantasmas(fantamasatual, fantamasparaconcluir);
         if (fantamasparaconcluir <= 0)
         {
-       //     ui.YouWin();
+            ui.YouWin();
         }
 
     }

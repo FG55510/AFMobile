@@ -8,8 +8,6 @@ public class UIManager : MonoBehaviour
 {
     public TMP_Text TMPfantasmas;
 
-    public TMP_Text TMPpontos;
-
     public TMP_Text TMPResultadofase;
 
     public Button Retryfase;
@@ -55,7 +53,7 @@ public class UIManager : MonoBehaviour
     public void YouWin()
     {
         TMPResultadofase.gameObject.SetActive(true);
-        TMPResultadofase.text = "YouWin";
+        TMPResultadofase.text = "You Win";
         Nextfase.gameObject.SetActive(true);
 
     }
