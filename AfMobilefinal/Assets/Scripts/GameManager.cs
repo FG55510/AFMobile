@@ -86,6 +86,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(faseatual.name);
     }
 
+    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.K))
@@ -102,7 +103,7 @@ public class GameManager : MonoBehaviour
     {
         fantamasparaconcluir--;
         fantamasatual--;
-       ui.Atualizarfantasmas(fantamasatual, fantamasparaconcluir);
+        ui.Atualizarfantasmas(fantamasatual, fantamasparaconcluir);
         if (fantamasparaconcluir <= 0)
         {
             ui.YouWin();
