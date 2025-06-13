@@ -30,7 +30,7 @@ public class PegarObject : MonoBehaviour
                 {
                     GhostStateMachine ativate = hit.collider.GetComponent<GhostStateMachine>();
                     Isbeingcontrolled = true;
-                    GameManager.Instance.MudarMododeJogo(ModosdeJogo.ControlandoItens);
+                   // GameManager.Instance.MudarMododeJogo(ModosdeJogo.ControlandoItens);
                 }
                 else
                 {

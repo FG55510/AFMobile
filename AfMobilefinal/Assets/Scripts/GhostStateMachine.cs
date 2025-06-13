@@ -42,7 +42,7 @@ public class GhostStateMachine : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Isbeingcontrolled = true;
-            GameManager.Instance.MudarMododeJogo(ModosdeJogo.ControlandoItens);
+           // GameManager.Instance.MudarMododeJogo(ModosdeJogo.ControlandoItens);
             if (efantasma)
             {
                 spriteRenderer.sprite = fantasma;
