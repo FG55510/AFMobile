@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1616727931423692077}
   - component: {fileID: 6760360227521407151}
   - component: {fileID: 8339481874723698355}
+  - component: {fileID: 4035437037320967531}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -127,3 +128,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joystick: {fileID: 0}
   speed: 5
+--- !u!114 &4035437037320967531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6122364919721539507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd142a0d98a4c72408e659db42ce37ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

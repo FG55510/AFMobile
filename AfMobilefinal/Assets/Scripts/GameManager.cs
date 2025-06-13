@@ -58,7 +58,8 @@ public class GameManager : MonoBehaviour
 
         faseatual = SceneManager.GetActiveScene();
 
-        fantamasatual = fantamasnafase;
+        fantamasparaconcluir = fantamasnafase;
+        fantamasatual = 0;
         ui.Atualizarfantasmas(fantamasatual, fantamasparaconcluir);
     }
 
@@ -89,11 +90,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            Fantasmamorreu();
-        }
-        if (Input.GetKeyDown(KeyCode.W))
+        
+    }
+
+    public void TestedeEntrega()
+    {
+        if (fantamasatual > 0)
         {
             Entregoufantasma();
         }
@@ -111,12 +113,19 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void AdicionaFantasma()
+    {
+        fantamasatual++;
+        ui.Atualizarfantasmas(fantamasatual, fantamasparaconcluir);
+
+    }
 
     public void ModoCamera()
     {
         MudarMododeJogo(ModosdeJogo.ControlandoCamera);
     }
 
+    
 
     public void MudarMododeJogo(ModosdeJogo novomodo)
     {
