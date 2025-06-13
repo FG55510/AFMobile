@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GhostStateMachine : MonoBehaviour
 {
-    public GhostsMoviment move;
+    public FantasmaMove move;
+
 
     public bool Isbeingcontrolled;
 
@@ -18,7 +19,7 @@ public class GhostStateMachine : MonoBehaviour
     void Start()
     {
         Isbeingcontrolled = false;
-        move = GetComponent<GhostsMoviment>();
+        move = GetComponent<FantasmaMove>();
         GameManager.Instance.Desassociarbixinhos.AddListener(DesativarControle);
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -58,6 +59,6 @@ public class GhostStateMachine : MonoBehaviour
 
     private void OnDestroy()
     {
-        
+        GameManager.Instance.Desassociarbixinhos.RemoveListener(DesativarControle);
     }
 }

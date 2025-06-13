@@ -5,14 +5,13 @@ using UnityEngine;
 public class PegarObject : MonoBehaviour
 {
     public LayerMask objetos;
-    public GhostsMoviment move;
+    public bool Fantasmas;
 
     public bool Isbeingcontrolled;
 
     // Start is called before the first frame update
     void Start()
     {
-        move = GetComponent<GhostsMoviment>();
         Isbeingcontrolled = false;
     }
 
@@ -25,11 +24,18 @@ public class PegarObject : MonoBehaviour
             Vector2 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
 
             RaycastHit2D hit = Physics2D.Raycast(touchPosition, Vector2.zero, 1000f, objetos);
-            if (hit.collider != null && hit.transform == transform) // Se tocou no objeto
+            if (hit.collider != null && hit.transform == transform) 
             {
-                GhostStateMachine ativate = hit.collider.GetComponent<GhostStateMachine>();
-                Isbeingcontrolled = true;
-                GameManager.Instance.MudarMododeJogo(ModosdeJogo.ControlandoItens);
+                if (Fantasmas)
+                {
+                    GhostStateMachine ativate = hit.collider.GetComponent<GhostStateMachine>();
+                    Isbeingcontrolled = true;
+                    GameManager.Instance.MudarMododeJogo(ModosdeJogo.ControlandoItens);
+                }
+                else
+                {
+                    BlocosMove ativate = hit.collider.GetComponent<BlocosMove>();
+                }
             }
         }
             

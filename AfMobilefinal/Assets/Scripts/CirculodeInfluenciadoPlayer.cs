@@ -6,7 +6,7 @@ public class CirculodeInfluenciadoPlayer : MonoBehaviour
 {
     private float touchStartTime = 0f;
     private bool isLongTap = false;
-    public float longTapDuration = 2f; // Tempo para considerar um long tap (5s)
+    public float longTapDuration = 2f; 
 
     public GameObject circlePrefab;
     public float growthSpeed = 2f;
@@ -37,7 +37,7 @@ public class CirculodeInfluenciadoPlayer : MonoBehaviour
                     if (!growcircle)
                     {
                         Vector3 touchPosition = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, Camera.main.nearClipPlane));
-                        touchPosition.z = 0; // Garante que o círculo esteja na mesma camada do plano onde você deseja que ele apareça
+                        touchPosition.z = 0; 
                         currentCircle = Instantiate(circlePrefab, touchPosition, Quaternion.identity); // Create circle at touch position
                         currentCircle.transform.localScale = new Vector3(minSize, minSize, 1); // Initial scale of the circle
                         growcircle = true;
