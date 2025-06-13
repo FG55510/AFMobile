@@ -14,9 +14,11 @@ public class BlocosMove : MonoBehaviour
     Vector3 posicaocolisao;
     Vector2 input;
 
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        GameManager.Instance.Movebloco.AddListener(Definirdirecao);
     }
 
     private void Update()
@@ -69,6 +71,11 @@ public class BlocosMove : MonoBehaviour
         }
         yield return null;
 
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.Instance.Movebloco.RemoveListener(Definirdirecao);
     }
 
 }

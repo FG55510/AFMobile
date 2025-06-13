@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 2615350826146597199}
   - component: {fileID: 8824604965246028877}
   - component: {fileID: 8371607002242262925}
-  - component: {fileID: 4797530623756755567}
-  - component: {fileID: 168789165590329927}
+  - component: {fileID: 7339829946117491726}
   m_Layer: 0
   m_Name: BoulderEvolution
   m_TagString: Bloco
@@ -167,7 +166,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &4797530623756755567
+--- !u!114 &7339829946117491726
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,20 +175,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2759255978471637198}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd142a0d98a4c72408e659db42ce37ee, type: 3}
+  m_Script: {fileID: 11500000, guid: f5b9c11c2828b604aa79e15827e807cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &168789165590329927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2759255978471637198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf4af384f98544546bde413fdb9ab44e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  moveDuration: 0.5
+  speed: 5
+  movedirection: {x: 0, y: 0}
+  ismoving: 0

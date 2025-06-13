@@ -6,6 +6,7 @@ public class Swipe : MonoBehaviour
 {
     Vector2 startTouchPosition, endTouchPosition;
     bool swipeDetected = false;
+    Vector2 direction;
     
     void Update()
     {
@@ -28,17 +29,19 @@ public class Swipe : MonoBehaviour
                     if (Mathf.Abs(swipeDelta.x) > Mathf.Abs(swipeDelta.y))
                     {
                         if (swipeDelta.x > 0)
-                            Debug.Log("Swipe para a direita");
+                            direction = Vector2.right;
                         else
-                            Debug.Log("Swipe para a esquerda");
+                            direction = Vector2.left;
                     }
                     else
                     {
                         if (swipeDelta.y > 0)
-                            Debug.Log("Swipe para cima");
+                            direction = Vector2.up;
                         else
-                            Debug.Log("Swipe para baixo");
+                            direction = Vector2.down;
                     }
+
+                    GameManager.Instance.Movebloco.Invoke(direction);
                 }
             }
         }

@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private CirculodeInfluenciadoPlayer circulo;
 
     public UnityEvent Desassociarbixinhos;
+    public UnityEvent<Vector2> Movebloco;
 
     public string nextscene;
     private Scene faseatual;
