@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class FantasmaLife : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-
-        Destroy(gameObject,0);
-        //Fantasmamorre
+        if (collision.CompareTag("MataFantasma"))
+        {
+            GameManager.Instance.Fantasmamorreu();
+        }
+        Destroy(gameObject, 0);
     }
 }

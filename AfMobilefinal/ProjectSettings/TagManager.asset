@@ -3,17 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Fantasma
+  - MataFantasma
+  - Hole
+  - Bloco
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Hole
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Player
+  - Fantasma
+  - MataFantasma
   - 
   - 
   - 
