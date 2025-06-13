@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5574827099745767255}
   - component: {fileID: 8500663880345892358}
   m_Layer: 7
-  m_Name: Ws_Ghost 1
+  m_Name: ghots
   m_TagString: Fantasma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
