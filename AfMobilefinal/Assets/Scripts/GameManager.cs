@@ -122,11 +122,11 @@ public class GameManager : MonoBehaviour
 
     public void ModoCamera()
     {
-        MudarMododeJogo(ModosdeJogo.ControlandoCamera);
+       // MudarMododeJogo(ModosdeJogo.ControlandoCamera);
     }
 
     
-
+    /*
     public void MudarMododeJogo(ModosdeJogo novomodo)
     {
 
@@ -149,7 +149,7 @@ public class GameManager : MonoBehaviour
         modo = novomodo;
             
     }
-
+    */
     
 
 }

@@ -9,6 +9,7 @@ public class PlayerpegaFantasma : MonoBehaviour
     {
         if (collision.collider.CompareTag("Fantasma")) {
             GameManager.Instance.AdicionaFantasma();
+            collision.gameObject.SetActive(false);
         }
     }
 }
